@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saadia Parveen</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fixing overlap of elements */
+        .services_box {
+            position: relative;
+        }
+        .services_box .hidden-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="m-0 p-0 text-gray-600 font-sans bg-white">
+
+    <!-- Header Section -->
+    <div id="header_wrapper" class="w-full bg-[url('/images/header.jpg')] bg-repeat-x">
+        <div id="header" class="max-w-screen-xl mx-auto py-4 flex justify-between items-center px-4">
+            <!-- Site Title -->
+            <div id="site_title" class="w-[200px]">
+                <a href="index.html" class="text-white text-3xl font-semibold">Saadia Parveen</a>
+            </div>
+
+            <!-- Search Box and Menu -->
+            <div class="flex items-center space-x-8">
+                <!-- Search Box -->
+                <div id="search_box" class="flex items-center space-x-2">
+                    <form action="#" method="get" class="flex">
+                        <input type="text" name="username" id="input_field" class="h-10 px-4 text-white text-sm bg-[#2c2a29] border border-[#1b0d03] rounded-l-lg placeholder-gray-300" placeholder="Search...">
+                        <input type="submit" name="login" value="Search" id="submit_btn" class="h-10 px-4 bg-[#2c2a29] border border-[#1b0d03] text-[#885f40] cursor-pointer rounded-r-lg text-sm">
+                    </form>
+                </div>
+
+                <!-- Menu -->
+                <div id="menu" class="flex space-x-6">
+                    <ul class="flex space-x-4">
+                        <li><a href="index.html" class="text-sm text-[#d7c39d] hover:text-[#b78864]">HOME</a></li>
+                        <li><a href="about.html" class="text-sm text-[#d7c39d] hover:text-[#b78864]">ABOUT</a></li>
+                        <li><a href="portfolio.html" class="text-sm text-[#d7c39d] hover:text-[#b78864]">PORTFOLIO</a></li>
+                        <li><a href="contact.html" class="text-sm text-[#d7c39d] hover:text-[#b78864]">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div id="welcome_wrapper" class="w-full bg-[url('/images/welcome.jpg')] bg-repeat-x">
+        <div id="welcome" class="max-w-screen-xl mx-auto py-6 px-4 flex flex-col md:flex-row items-center justify-between bg-[url('/images/wlecome_bg.jpg')] bg-no-repeat bg-right-top">
+            <!-- Welcome Image -->
+            <div id="welcome_image" class="w-full md:w-[350px] h-auto relative mb-6 md:mb-0">
+                <span class="absolute top-0 left-0 w-[350px] h-[200px] bg-[url('/images/slide.png')] bg-cover"></span>
+                <img src="images/image_01.jpg" alt="Saadia Parveen" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+
+            <!-- Welcome Text -->
+            <div id="welcome_text" class="w-full md:w-[520px] text-center md:text-left">
+                <h1 class="text-4xl font-semibold mb-6">Career Objective</h1>
+                <p class="text-lg mb-6">"Eager to pursue a dynamic career in the tech industry, particularly in web application development, with a focus on open-source technologies such as PHP, AI, and the MERN stack. Seeking opportunities to contribute to innovative projects and further enhance my technical skills."</p>
+                <a href="portfolio.html" class="inline-block px-6 py-3 bg-[#1b0d03] text-white text-sm font-semibold rounded-md hover:bg-[#885f40] transition duration-300 ease-in-out">View Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services_wrapper" class="w-full bg-[#f4f4f4] py-12">
+        <div id="services" class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Personal Information Box -->
+            <div class="services_box p-6 bg-white shadow-md rounded-lg text-center relative">
+                <div class="absolute inset-0 bg-[url('/images/service_bg.png')] bg-cover bg-center opacity-30 rounded-lg"></div>
+                <h2 class="text-xl font-semibold mb-4 relative z-10">Personal Information</h2>
+                <p>Name: Saadia Parveen</p>
+                <p>Phone: ...</p>
+                <!-- Hidden content for toggling -->
+                <div id="more-info-1" class="hidden-content mt-4 text-left">
+                    <p>Additional details about my career and background...</p>
+                </div>
+                <button onclick="toggleInfo(1)" class="inline-block mt-4 px-4 py-2 bg-[#2c2a29] text-white text-sm rounded-md hover:bg-[#311c0c] transition duration-300 ease-in-out">
+                    Read more
+                </button>
+            </div>
+
+            <!-- Education Box -->
+            <div class="services_box p-6 bg-white shadow-md rounded-lg text-center relative">
+                <div class="absolute inset-0 bg-[url('/images/service_bg.png')] bg-cover bg-center opacity-30 rounded-lg"></div>
+                <h2 class="text-xl font-semibold mb-4 relative z-10">Education</h2>
+                <p>Masters: MBA From Urdu University</p>
+                <p>Bachelors: B.Com From ...</p>
+                <div id="more-info-2" class="hidden-content mt-4 text-left">
+                    <p>Additional details about education...</p>
+                </div>
+                <button onclick="toggleInfo(2)" class="inline-block mt-4 px-4 py-2 bg-[#2c2a29] text-white text-sm rounded-md hover:bg-[#311c0c] transition duration-300 ease-in-out">
+                    Read more
+                </button>
+            </div>
+
+            <!-- Skills Box -->
+            <div class="services_box p-6 bg-white shadow-md rounded-lg text-center relative">
+                <div class="absolute inset-0 bg-[url('/images/service_bg.png')] bg-cover bg-center opacity-30 rounded-lg"></div>
+                <h2 class="text-xl font-semibold mb-4 relative z-10">Skills</h2>
+                <p>HTML | CSS | Javascript | Typescript | MS ...</p>
+                <div id="more-info-3" class="hidden-content mt-4 text-left">
+                    <p>Additional details about my skills...</p>
+                </div>
+                <button onclick="toggleInfo(3)" class="inline-block mt-4 px-4 py-2 bg-[#2c2a29] text-white text-sm rounded-md hover:bg-[#311c0c] transition duration-300 ease-in-out">
+                    Read more
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div id="content_wrapper_outer" class="w-full bg-[#f9f9f9] py-12">
+        <div id="content_wrapper_inner" class="max-w-screen-xl mx-auto px-6">
+            <div id="content_wrapper" class="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+                <!-- Content -->
+                <div id="content" class="w-full md:w-2/3 p-8 bg-white shadow-md rounded-lg">
+                    <h2 class="text-2xl font-bold mb-6">Work Experience</h2>
+                    <p>Seeking an opportunity as a fresh candidate to start my professional career...</p>
+                </div>
+
+                <!-- Sidebar -->
+                <div id="sidebar" class="w-full md:w-1/3 p-8 bg-white shadow-md rounded-lg">
+                    <h2 class="text-xl font-semibold mb-6">Accreditations</h2>
+                    <p>Artificial Intelligence, Web 3.0 & Metaverse: From Governor House Karachi (Ongoing)</p>
+                    <p>Communication & Soft Skills: From Virtual University.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div id="footer_wrapper" class="w-full bg-[#1b0d03] text-white py-8">
+        <div id="footer" class="max-w-screen-xl mx-auto text-center">
+            <p>&copy; 2024 Saadia Parveen. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Toggle visibility of content for "Read more" buttons
+        function toggleInfo(infoNumber) {
+            var content = document.getElementById('more-info-' + infoNumber);
+            if (content.classList.contains('hidden-content')) {
+                content.classList.remove('hidden-content');
+                content.style.display = 'block';
+            } else {
+                content.classList.add('hidden-content');
+                content.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
